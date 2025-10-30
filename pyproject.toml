@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "base_kaggle"
+version = "0.1"
+
+authors = [{name = "n-j-p"}]
+description = "Base repo for kaggle.com competition code"
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[project.scripts]
+mypkg-cli = "base_kaggle.scripts.download_data:main"
