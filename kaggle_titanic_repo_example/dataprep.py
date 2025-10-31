@@ -25,3 +25,21 @@ def load_data(data_path = f'/kaggle/input/{COMP_NAME}'):
 
 
                 
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import PowerTransformer
+from sklearn.preprocessing import OneHotEncoder
+
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+ct=ColumnTransformer([('impute', 
+                       SimpleImputer(strategy='mean'), 
+                       ['Age', 'Fare']),
+                      ('encode', 
+                       OneHotEncoder(handle_unknown='ignore',
+                                    sparse_output=False), 
+                       ['Sex']),
+                     ],
+                     remainder='drop')
+preprocessing_pipeline = Pipeline([('prep', ct),
+                                   ('scale', PowerTransformer()),
+                                  ]).set_output(transform='pandas')
