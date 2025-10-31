@@ -6,7 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from __competition__ import COMP_NAME
+from kaggle_titanic_repo_example.__competition__ import COMP_NAME
 
 if __name__ == '__main__':
     print(f'kaggle competition name: {COMP_NAME}\n')

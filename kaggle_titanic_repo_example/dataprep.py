@@ -4,7 +4,7 @@ import os
 import numpy as np
 from collections import namedtuple
 
-from base_kaggle.__competition__ import COMP_NAME, TRAIN_NAME, \
+from kaggle_titanic_repo_example.__competition__ import COMP_NAME, TRAIN_NAME, \
     TEST_NAME, ID_COLUMN_NAME, SUB_NAME
 
 def load_data(data_path = f'/kaggle/input/{COMP_NAME}'):

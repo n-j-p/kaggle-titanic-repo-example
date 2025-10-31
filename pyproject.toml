@@ -3,7 +3,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "base_kaggle"
+name = "kaggle_titanic_repo_example"
 version = "0.1"
 
 authors = [{name = "n-j-p"}]
@@ -12,4 +12,4 @@ readme = "README.md"
 license = {file = "LICENSE"}
 
 [project.scripts]
-mypkg-cli = "base_kaggle.scripts.download_data:main"
+mypkg-cli = "kaggle_titanic_repo_example.scripts.download_data:main"
